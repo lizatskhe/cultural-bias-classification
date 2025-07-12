@@ -2,6 +2,18 @@
 
 The goal is to classify items into cultural agnostic and non-agnostic (representative/exclusive) categories using both traditional feature-based methods and transformer-based models.
 
+**Cultural Agnostic (CA)**: Universally known items not tied to any culture (e.g., bicycle, smartphone).
+
+**Cultural Representative (CR)**: Items associated with a culture but understood more broadly (e.g., sushi, pizza).
+
+**Cultural Exclusive (CE)**: Culturally specific items with limited recognition outside their origin (e.g., Nowruz, kimono).
+
+## Methods
+
+For the **non-LM-based** approach, I performed feature engineering using metadata fields (e.g., category, subcategory), applied text preprocessing, and trained a Random Forest classifier with class balancing and error analysis.
+
+For the **LM-based** approach, I fine-tuned a DistilBERT model on combined textual fields, using class weights to address imbalance and evaluated performance using accuracy and F1-score.
+
 ## Project Structure
 
 
